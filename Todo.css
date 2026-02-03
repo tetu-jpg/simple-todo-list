@@ -1,0 +1,247 @@
+body {
+  background-color: #6e0049; /* page background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+}
+
+.todo-container {
+  width: 400px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* center children vertically */
+  align-items: flex-start; /* center children horizontally */
+}
+
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.input-container button {
+  padding: 4px 8px; /* small padding */
+  font-size: 12px;  /* small font */
+  background-color: #6e0049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;      /* make sure button doesn't stretch */
+  flex: 0 0 auto;   /* prevent flex stretching */
+}
+
+.delete-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #6e0049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+
+button {
+  padding: 4px 8px; /* smaller button size */
+  background-color: #6e0049; /* button color */
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white; /* button text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.task-item {
+  display: flex;                  /* make it a flex container */
+  align-items: center;            /* vertically center items */
+  justify-content: space-between; /* left = checkbox+text, right = delete button */
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px 8px;
+  background-color: transparent;
+}
+
+.task-left {
+  display: flex;         /* group checkbox and text together */
+  align-items: center;   /* vertical alignment */
+  gap: 8px;              /* space between checkbox and text */
+}
+
+.task-left input[type="checkbox"] {
+  margin: 0;             /* remove default spacing */
+}
+
+.delete-btn {
+  flex: 0 0 auto;       /* don’t stretch */
+  padding: 3px 6px;
+  font-size: 12px;
+  background-color: #6e0049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.delete-btn {
+  flex: 0 0 auto;  /* prevent stretching */
+  padding: 3px 6px;
+  font-size: 12px;
+  background-color: #6e0049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.input-container button,
+.delete-btn {
+  padding: 3px 6px; /* smaller padding */
+  font-size: 12px;  /* smaller font */
+  min-width: 0;     /* remove extra minimum width */
+  height: 28px;     /* fix button height */
+}
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;   /* spacing between checkbox and text */
+}
+
+.task-left input[type="checkbox"] {
+  margin: 0; /* remove browser default spacing */
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+.clear-btn {
+  display: block;         /* make it a block element */
+  margin: 20px auto 0;    /* center horizontally */
+  padding: 10px 20px;     /* bigger padding */
+  font-size: 16px;        /* bigger text */
+  background-color: #6e0049;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;  /* smooth hover */
+}
+
+.clear-btn:hover {
+  opacity: 0.9;           /* subtle hover effect */
+}
+
+button:focus,
+button:active {
+  outline: none;              /* remove border outline */
+  box-shadow: none;           /* remove glow effect */
+  background-color: #6e0049;  /* keep your button color stable */
+}
+.clear-btn:focus,
+.clear-btn:active {
+  outline: none;
+  box-shadow: none;
+  background-color: #6e0049;
+}
+.todo-container {
+  width: 400px;
+  padding: 20px;
+  
+  border-radius: 8px;
+  color: black;
+  text-align: left;   /* change from center to left */
+  
+}
+.todo-container h1 {
+  text-align: center;   /* title stays centered */
+}
+
+.task-list {
+  text-align: left;     /* tasks aligned left */
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-container button {
+  margin-left: auto; /* pushes button to the right */
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px 8px;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;           /* consistent space between checkbox and text */
+  flex: 1;            /* take up remaining space */
+}
+
+.task-left input[type="checkbox"] {
+  margin: 0;
+  width: 16px;        /* fixed size for checkbox */
+  flex-shrink: 0;     /* checkbox never shrinks */
+}
+
+.task-left span {
+  flex: 1;            /* text takes all leftover space */
+  text-align: left;
+  word-break: break-word; /* wraps long text neatly */
+}
+
+
+
+
+
+.delete-btn {
+  margin-left: 10px; /* small gap from text */
+  flex: 0 0 auto;    /* prevent stretching */
+}
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;           /* space between checkbox and text */
+  min-width: 200px;    /* or any fixed width for the left part */
+}
+
+.task-left input[type="checkbox"] {
+  margin: 0;
+  flex-shrink: 0;      /* prevent checkbox from shrinking */
+}
+
+
+
+

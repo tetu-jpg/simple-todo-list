@@ -1,2 +1,2 @@
 # simple-todo-list
-Simple Todo list built with React
+This is Simple Todo list built with React for our daily activities.
